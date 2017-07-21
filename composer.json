@@ -1,6 +1,6 @@
 {
-    "name": "alshahawi/laravel",
-    "description": "The Laravel Framework.",
+    "name": "ahmed-aliraqi/laravel-project",
+    "description": "A laravel scaffolding that includes debugbar, ide-helper and .php_cs configurations.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
