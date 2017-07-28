@@ -1,69 +1,71 @@
 {
-    "name": "ahmed-aliraqi/laravel-project",
-    "description": "A laravel scaffolding that includes debugbar, ide-helper and .php_cs configurations.",
-    "keywords": ["framework", "laravel"],
-    "license": "MIT",
-    "type": "project",
-    "require": {
-        "php": ">=5.6.4",
-        "barryvdh/laravel-debugbar": "^2.4",
-        "barryvdh/laravel-ide-helper": "^2.4",
-        "doctrine/dbal": "^2.5",
-        "laravel/framework": "5.4.*",
-        "laravel/tinker": "~1.0",
-        "ezyang/htmlpurifier": "^4.9",
-        "ahmed-aliraqi/artisan-scaffolding": "^1.0"
+  "name": "alshahawi/laravel",
+  "description": "The Laravel Framework.",
+  "keywords": ["framework", "laravel"],
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": ">=5.6.4",
+    "barryvdh/laravel-debugbar": "^2.4",
+    "barryvdh/laravel-ide-helper": "^2.4",
+    "doctrine/dbal": "^2.5",
+    "ezyang/htmlpurifier": "^4.9",
+    "laravel/framework": "5.4.*",
+    "laravel/tinker": "~1.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.4",
+    "fzaninotto/faker": "~1.4",
+    "mockery/mockery": "0.9.*",
+    "phpunit/phpunit": "~5.7",
+    "ahmed-aliraqi/artisan-scaffolding": "^1.0"
+  },
+  "autoload": {
+    "classmap": [
+      "database"
+    ],
+    "psr-4": {
+      "App\\": "app/"
     },
-    "require-dev": {
-        "fzaninotto/faker": "~1.4",
-        "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~5.7"
-    },
-    "autoload": {
-        "classmap": [
-            "database"
-        ],
-        "psr-4": {
-            "App\\": "app/"
-        },
-      "files": [
-        "app/Support/helpers.php"
-      ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "php-cs:issues": "php-cs-fixer fix --diff --dry-run",
-        "php-cs:fix": "php-cs-fixer fix",
-        "app:clear": "php artisan clear-compiled && php artisan cache:clear && php artisan config:clear && php artisan debugbar:clear && php artisan route:clear && php artisan view:clear",
-        "auto-complete:generate": [
-            "php artisan ide-helper:meta",
-            "php artisan ide-helper:generate",
-            "php artisan ide-helper:models --nowrite"
-        ],
-        "post-root-package-install": [
-            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "php artisan key:generate"
-        ],
-        "post-install-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "php artisan optimize"
-        ],
-        "post-update-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "php artisan ide-helper:generate",
-            "php artisan ide-helper:meta",
-            "php artisan optimize"
-        ]
-    },
-    "config": {
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "optimize-autoloader": true
+    "files": [
+      "app/Support/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
     }
+  },
+  "scripts": {
+    "php-cs:issues": "vendor/bin/php-cs-fixer fix --diff --dry-run",
+    "php-cs:fix": "vendor/bin/php-cs-fixer fix",
+    "app:clear": "php artisan clear-compiled && php artisan cache:clear && php artisan config:clear && php artisan debugbar:clear && php artisan route:clear && php artisan view:clear",
+    "auto-complete:generate": [
+      "php artisan ide-helper:meta",
+      "php artisan ide-helper:generate",
+      "php artisan ide-helper:models --nowrite"
+    ],
+    "api:generate": "php sami.phar update docs/api/config.php",
+    "post-root-package-install": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "php artisan key:generate"
+    ],
+    "post-install-cmd": [
+      "Illuminate\\Foundation\\ComposerScripts::postInstall",
+      "php artisan optimize"
+    ],
+    "post-update-cmd": [
+      "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+      "php artisan ide-helper:generate",
+      "php artisan ide-helper:meta",
+      "php artisan optimize"
+    ]
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
 }
