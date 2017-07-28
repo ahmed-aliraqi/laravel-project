@@ -6,18 +6,12 @@
 /vendor
 /.idea
 /.vagrant
-<<<<<<< HEAD
-Homestead.json
-Homestead.yaml
-npm-debug.log
-=======
 /docs/api/build
 /docs/api/_cache
 Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
->>>>>>> upstream/scaffolding/5.4
 .env
 *~
 .phpstorm.meta.php

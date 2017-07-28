@@ -18,30 +18,17 @@ $finder = PhpCsFixer\Finder::create()
 return PhpCsFixer\Config::create()
     ->setRules([
         '@PSR2' => true,
-<<<<<<< HEAD
-=======
 
         /*
          * Arrays
          */
 
->>>>>>> upstream/scaffolding/5.4
         // PHP arrays should be declared using the short syntax [] not array().
         'array_syntax' => ['syntax' => 'short'],
 
         // In array declaration, there MUST be a whitespace after each comma.
         'whitespace_after_comma_in_array' => true,
 
-<<<<<<< HEAD
-        // Ensure there is no code on the same line as the PHP open tag and it is followed by a blank line.
-        'blank_line_after_opening_tag' => true,
-
-        // An empty line feed should precede a return statement.
-        'blank_line_before_return' => true,
-
-        // Single line comments should use double slashes // and not hash #.
-        'hash_to_slash_comment' => true,
-=======
         // PHP multi-line arrays should have a trailing comma.
         'trailing_comma_in_multiline_array' => true,
 
@@ -51,17 +38,13 @@ return PhpCsFixer\Config::create()
 
         // Ensure there is no code on the same line as the PHP open tag and it is followed by a blank line.
         'blank_line_after_opening_tag' => true,
->>>>>>> upstream/scaffolding/5.4
 
         // Methods must be separated with one blank line.
         'method_separation' => true,
 
-<<<<<<< HEAD
-=======
         // An empty line feed should precede a return statement.
         'blank_line_before_return' => true,
 
->>>>>>> upstream/scaffolding/5.4
         // Remove trailing whitespace at the end of blank lines.
         'no_whitespace_in_blank_line' => true,
 
@@ -71,10 +54,6 @@ return PhpCsFixer\Config::create()
         // There should not be space before or after object T_OBJECT_OPERATOR ->.
         'object_operator_without_whitespace' => true,
 
-<<<<<<< HEAD
-        // The import statements should be sorted by length.
-        'ordered_imports' => ['sortAlgorithm' => 'length'],
-=======
         // A single space should be between cast and variable.
         'cast_spaces' => true,
 
@@ -87,17 +66,10 @@ return PhpCsFixer\Config::create()
         /*
          * PHPDocs
          */
->>>>>>> upstream/scaffolding/5.4
 
         // Docblocks should have the same indentation as the documented subject.
         'phpdoc_indent' => true,
 
-<<<<<<< HEAD
-        // Annotations in phpdocs should be grouped together so that annotations of the same type immediately follow each other, and annotations of a different type are separated by a single blank line.
-        'phpdoc_separation' => true,
-
-=======
->>>>>>> upstream/scaffolding/5.4
         // Annotations in phpdocs should be ordered so that param annotations come first, then throws annotations, then return annotations.
         'phpdoc_order' => true,
 
@@ -110,24 +82,6 @@ return PhpCsFixer\Config::create()
         // Docblocks should only be used on structural elements.
         'phpdoc_to_comment' => true,
 
-<<<<<<< HEAD
-        // Cast (boolean) and (integer) should be written as (bool) and (int), (double) and (real) as (float).
-        'short_scalar_cast' => true,
-
-        // A single space should be between cast and variable.
-        'cast_spaces' => true,
-
-        // There should be exactly one blank line before a namespace declaration.
-        'single_blank_line_before_namespace' => true,
-
-        // Standardize spaces around ternary operator.
-        'ternary_operator_spaces' => true,
-
-        // PHP multi-line arrays should have a trailing comma.
-        'trailing_comma_in_multiline_array' => true,
-
-=======
->>>>>>> upstream/scaffolding/5.4
         // @package and @subpackage annotations should be omitted from phpdocs.
         'phpdoc_no_package' => true,
 
@@ -136,8 +90,6 @@ return PhpCsFixer\Config::create()
 
         // Scalar types should always be written in the same form. int not integer, bool not boolean, float not real or double.
         'phpdoc_scalar' => true,
-<<<<<<< HEAD
-=======
 
         /*
          * Other
@@ -151,7 +103,6 @@ return PhpCsFixer\Config::create()
 
         // The import statements should be sorted by length.
         'ordered_imports' => ['sortAlgorithm' => 'length'],
->>>>>>> upstream/scaffolding/5.4
     ])
     ->setFinder($finder)
 ;
